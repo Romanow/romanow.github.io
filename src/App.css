@@ -2,12 +2,3 @@
     min-height: 100vh;
     background-image: linear-gradient(to left bottom, #ffffff, #f6f6f6, #ededed, #e5e5e5, #dcdcdc);
 }
-
-.about {
-    padding-top: 200px;
-}
-
-.profile-picture {
-    width: 150px;
-    height: 150px;
-}
