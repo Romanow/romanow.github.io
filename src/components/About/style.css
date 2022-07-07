@@ -1,8 +1,14 @@
 .about {
-  padding-top: 200px;
+    padding: 20px;
+}
+
+@media (min-width: 768px) {
+    .about {
+        padding-top: 200px;
+    }
 }
 
 .profile-picture {
-  width: 150px;
-  height: 150px;
+    width: 150px;
+    height: 150px;
 }
