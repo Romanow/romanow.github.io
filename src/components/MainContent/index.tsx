@@ -43,22 +43,22 @@ const MainContent: FC = () => {
 
     return (
         <div>
-            <div>
+            <div id="bmstu">
                 <h2 className="h2">Bauman Moscow State Technical University</h2>
                 {loading ? <Loader/> : <Repositories repos={filter(repos, r => includes(bmstu, r.name))}/>}
             </div>
 
-            <div>
+            <div id="reports">
                 <h2 className="h2">Lectures and Public Reports</h2>
                 {loading ? <Loader/> : <Repositories repos={filter(repos, r => includes(reports, r.name))}/>}
             </div>
 
-            <div>
+            <div id="work">
                 <h2 className="h2">Work</h2>
                 {loading ? <Loader/> : <Repositories repos={filter(repos, r => includes(work, r.name))}/>}
             </div>
 
-            <div>
+            <div id="devops">
                 <h2 className="h2">DevOps</h2>
                 {loading ? <Loader/> : <Repositories repos={filter(repos, r => includes(devops, r.name))}/>}
             </div>
