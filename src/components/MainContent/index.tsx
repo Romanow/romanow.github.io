@@ -1,7 +1,7 @@
 import React, {FC, useEffect, useState} from "react";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faSpinner} from "@fortawesome/free-solid-svg-icons";
-import {filter, find, includes} from "lodash";
+import {find} from "lodash";
 
 import {GithubApi} from "../../GithubApi";
 import {UserRepositoriesResponseType} from "../../types";
@@ -85,7 +85,8 @@ const MainContent: FC = () => {
 
         <div id="reports">
           <h2 className="h2">Lectures and Public Reports</h2>
-          {loading ? <Loader/> : <Repositories repos={reports.flatMap(name => find(repos, r => r.name === name) || [])}/>}
+          {loading ? <Loader/> :
+              <Repositories repos={reports.flatMap(name => find(repos, r => r.name === name) || [])}/>}
         </div>
 
         <div id="work">
@@ -95,7 +96,8 @@ const MainContent: FC = () => {
 
         <div id="devops">
           <h2 className="h2">DevOps</h2>
-          {loading ? <Loader/> : <Repositories repos={devops.flatMap(name => find(repos, r => r.name === name) || [])}/>}
+          {loading ? <Loader/> :
+              <Repositories repos={devops.flatMap(name => find(repos, r => r.name === name) || [])}/>}
         </div>
       </div>
   )
