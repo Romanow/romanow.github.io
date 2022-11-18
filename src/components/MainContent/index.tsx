@@ -8,62 +8,96 @@ import {UserRepositoriesResponseType} from "../../types";
 import Repositories from "../Repositories";
 
 const devops = [
-    "ansible-kafka", "ansible-kubernetes", "ansible-box-packer", "ansible-consul",
-    "ansible-elastic", "ansible-elastic-role", "ansible-mongodb-role", "ansible-graylog"
+  "terraform-do-k8s",
+  "terraform-aws-k8s",
+  "ansible-box-packer",
+  "project-operator",
+  "ansible-kafka",
+  "ansible-consul",
+  "ansible-elastic",
+  "ansible-elastic-role",
+  "ansible-mongodb-role",
+  "ansible-graylog"
 ];
 
-const bmstu = ["lectures", "micro-services-v2", "serialization-protocols", "web-protocols", "restful"];
+const bmstu = [
+  "lectures",
+  "micro-services-v2",
+  "simple-backend",
+  "simple-frontend",
+  "databases",
+  "person-service",
+  "serialization-protocols",
+  "web-protocols",
+  "restful",
+  "rsocket"
+];
 
-const work = ["jpa-example", "state-machine", "rsocket", "skip-method"];
+const work = [
+  "state-machine",
+  "password-encryptor",
+  "artemis-jms",
+  "skip-method"
+];
 
 const reports = [
-    "docker-in-development", "merge-github-autograder", "app-deploy",
-    "scc-warehouse", "scc-delivery", "scc-orders", "lecture-spring-boot-example"
+  "docker-in-development",
+  "gateway-lecture",
+  "jpa-example",
+  "molecule-lecture",
+  "analystdays-microservices",
+  "merge-github-autograder",
+  "app-deploy",
+  "scc-contracts",
+  "scc-warehouse",
+  "scc-delivery",
+  "scc-orders",
+  "lecture-spring-boot-example"
 ];
 
 const Loader: FC = () => {
-    return (
-        <div className="text-center my-5">
-            <FontAwesomeIcon icon={faSpinner} pulse={true} size="2x"/>
-        </div>
-    );
+  return (
+      <div className="text-center my-5">
+        <FontAwesomeIcon icon={faSpinner} pulse={true} size="2x"/>
+      </div>
+  );
 }
 
 const MainContent: FC = () => {
-    const [repos, setRepos] = useState<UserRepositoriesResponseType>([]);
-    const [loading, setLoading] = useState<boolean>(true);
+  const [repos, setRepos] = useState<UserRepositoriesResponseType>([]);
+  const [loading, setLoading] = useState<boolean>(true);
 
-    useEffect(() => {
-        GithubApi.loadUserRepositories("Romanow")
-            .then(data => {
-                setLoading(false);
-                setRepos(data);
-            })
-    }, []);
+  useEffect(() => {
+    GithubApi.loadUserRepositories("Romanow")
+    .then(data => {
+      setLoading(false);
+      setRepos(data);
+    })
+  }, []);
 
-    return (
-        <div>
-            <div id="bmstu">
-                <h2 className="h2">Bauman Moscow State Technical University</h2>
-                {loading ? <Loader/> : <Repositories repos={filter(repos, r => includes(bmstu, r.name))}/>}
-            </div>
-
-            <div id="reports">
-                <h2 className="h2">Lectures and Public Reports</h2>
-                {loading ? <Loader/> : <Repositories repos={filter(repos, r => includes(reports, r.name))}/>}
-            </div>
-
-            <div id="work">
-                <h2 className="h2">Work</h2>
-                {loading ? <Loader/> : <Repositories repos={filter(repos, r => includes(work, r.name))}/>}
-            </div>
-
-            <div id="devops">
-                <h2 className="h2">DevOps</h2>
-                {loading ? <Loader/> : <Repositories repos={filter(repos, r => includes(devops, r.name))}/>}
-            </div>
+  return (
+      <div>
+        <div id="bmstu">
+          <h2 className="h2">Bauman Moscow State Technical University</h2>
+          {loading ? <Loader/> : <Repositories repos={filter(repos, r => includes(bmstu, r.name))}/>}
         </div>
-    )
+
+        <div id="reports">
+          <h2 className="h2">Lectures and Public Reports</h2>
+          {loading ? <Loader/> : <Repositories repos={filter(repos, r => includes(reports, r.name))}/>}
+        </div>
+
+        <div id="work">
+          <h2 className="h2">Work</h2>
+          {loading ? <Loader/> : <Repositories repos={filter(repos, r => includes(work, r.name))}/>}
+        </div>
+
+        <div id="devops">
+          <h2 className="h2">DevOps</h2>
+          {loading ? <Loader/> : <Repositories repos={filter(repos, r => includes(devops, r.name))}/>}
+        </div>
+      </div>
+  )
 }
 
 export default MainContent;
