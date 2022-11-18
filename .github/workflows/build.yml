@@ -16,7 +16,7 @@ jobs:
       - name: Install dependencies and Build 🔧
         run: |
           npm ci
-          npm predeploy
+          npm run predeploy
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
