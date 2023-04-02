@@ -34,6 +34,8 @@ const bmstu = [
 ];
 
 const work = [
+  "batch-migration",
+  "camunda-state-machine",
   "state-machine",
   "password-encryptor",
   "artemis-jms",
@@ -41,6 +43,7 @@ const work = [
 ];
 
 const reports = [
+  "helm-charts",
   "docker-in-development",
   "gateway-lecture",
   "jpa-example",
