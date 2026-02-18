@@ -1,0 +1,11 @@
+services:
+  romanow.github.io:
+    build: .
+    container_name: romanow.github.io
+    ports:
+      - "8080:80"
+    healthcheck:
+      test: "curl --fail http://localhost || exit 1"
+      interval: 5s
+      timeout: 5s
+      retries: 5

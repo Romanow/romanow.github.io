@@ -1,0 +1,356 @@
+:root {
+  --bg: #f2f7ff;
+  --surface: #ffffff;
+  --surface-soft: #f7faff;
+  --border: #d7e3f8;
+  --text: #172b4d;
+  --muted: #5f7398;
+  --accent: #1f5ed8;
+  --accent-soft: #e5efff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.portfolio-page {
+  background: radial-gradient(circle at top left, #f8fbff 0%, var(--bg) 60%, #ecf3ff 100%);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+.portfolio-header {
+  background: rgba(242, 247, 255, 0.92);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(8px);
+}
+
+.logo {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  display: inline-flex;
+  height: 34px;
+  justify-content: center;
+  overflow: visible;
+  text-decoration: none;
+  width: 34px;
+}
+
+.logo-image {
+  display: block;
+  height: 34px;
+  width: 34px;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.nav-link-item {
+  color: #42567c;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.nav-link-item:hover {
+  color: var(--accent);
+}
+
+.language-switch {
+  display: inline-flex;
+  gap: 0.4rem;
+}
+
+.surface {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: 0 12px 24px rgba(31, 85, 166, 0.08);
+  padding: 1.5rem;
+}
+
+.hero {
+  background: linear-gradient(145deg, #ffffff 0%, #f2f7ff 100%);
+}
+
+.profile-image {
+  aspect-ratio: 1 / 1;
+  border: 6px solid #d8e6ff;
+  border-radius: 16px;
+  object-fit: cover;
+  width: 100%;
+  max-width: 250px;
+}
+
+.profession {
+  color: var(--accent);
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.icon-btn {
+  align-items: center;
+  display: inline-flex;
+  gap: 0.4rem;
+}
+
+.btn-github {
+  background: #24292f;
+  border: 1px solid #24292f;
+  color: #fff;
+}
+
+.btn-github:hover {
+  background: #1b1f23;
+  border-color: #1b1f23;
+  color: #fff;
+}
+
+.btn-linkedin {
+  background: #0a66c2;
+  border: 1px solid #0a66c2;
+  color: #fff;
+}
+
+.btn-linkedin:hover {
+  background: #084f99;
+  border-color: #084f99;
+  color: #fff;
+}
+
+.btn-telegram {
+  background: #229ed9;
+  border: 1px solid #229ed9;
+  color: #fff;
+}
+
+.btn-telegram:hover {
+  background: #1b86b8;
+  border-color: #1b86b8;
+  color: #fff;
+}
+
+.btn-speakerdeck {
+  background: #009287;
+  border: 1px solid #009287;
+  color: #fff;
+}
+
+.btn-speakerdeck:hover {
+  background: #00756c;
+  border-color: #00756c;
+  color: #fff;
+}
+
+.btn-github-open {
+  background: #fff;
+  border: 1px solid #24292f;
+  color: #111;
+}
+
+.btn-github-open:hover {
+  background: #f4f4f4;
+  border-color: #111;
+  color: #111;
+}
+
+.section-gap {
+  margin-top: 1.2rem;
+}
+
+.strength-card,
+.skill-group,
+.repo-card {
+  background: var(--surface-soft);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 0.9rem;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.strength-card:hover,
+.repo-card:hover {
+  border-color: #90b3ef;
+  box-shadow: 0 14px 24px rgba(31, 85, 166, 0.18);
+  transform: translateY(-2px);
+}
+
+.strength-card h3,
+.skill-group h3,
+.project-group-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.strength-card p,
+.repo-description {
+  color: var(--muted);
+  margin-bottom: 0;
+}
+
+.skill-badge,
+.topic-badge {
+  background: var(--accent-soft);
+  border-radius: 999px;
+  color: #234f9f;
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1;
+  padding: 0.45rem 0.7rem;
+}
+
+.skill-badge {
+  align-items: center;
+  display: inline-flex;
+  gap: 0.35rem;
+}
+
+.skill-badge-icon {
+  display: inline-flex;
+  font-size: 0.98rem;
+}
+
+.topic-badge {
+  display: inline-block;
+}
+
+.project-group {
+  margin-top: 1rem;
+}
+
+.repo-header {
+  align-items: center;
+  display: flex;
+  gap: 0.6rem;
+  justify-content: space-between;
+}
+
+.repo-card h4 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.compact-card {
+  padding: 0.8rem;
+}
+
+.repo-description {
+  display: -webkit-box;
+  font-size: 0.92rem;
+  line-height: 1.3;
+  margin-bottom: 0.7rem;
+  min-height: 2.4rem;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.repo-stats-row {
+  align-items: center;
+  color: #4a6490;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 0.83rem;
+  gap: 0.7rem;
+}
+
+.repo-stats-row span {
+  align-items: center;
+  display: inline-flex;
+  gap: 0.3rem;
+}
+
+.state-box {
+  background: #f8fbff;
+  border: 1px dashed #b7caee;
+  border-radius: 12px;
+  color: #3f5c8d;
+  margin-top: 0.75rem;
+  padding: 0.75rem 0.95rem;
+}
+
+.state-error {
+  background: #fff5f5;
+  border-color: #ecb2b2;
+  color: #a44747;
+}
+
+.talks-list {
+  padding-left: 1rem;
+}
+
+.talks-list li {
+  margin-bottom: 0.45rem;
+}
+
+.talks-list a,
+.portfolio-footer a {
+  color: #2553a8;
+  text-decoration: none;
+}
+
+.talks-list a:hover,
+.portfolio-footer a:hover {
+  text-decoration: underline;
+}
+
+.portfolio-footer {
+  border-top: 1px solid var(--border);
+  margin-top: 1.8rem;
+}
+
+@media (max-width: 991px) {
+  .portfolio-header .navbar {
+    row-gap: 0.6rem;
+  }
+
+  .nav-links {
+    flex: 1;
+    flex-wrap: nowrap;
+    min-width: 0;
+    overflow-x: auto;
+    width: auto;
+  }
+
+  .nav-links::-webkit-scrollbar {
+    display: none;
+  }
+
+  .language-switch {
+    justify-content: flex-end;
+    margin-left: 0;
+    order: 3;
+    width: 100%;
+  }
+}
+
+@media (max-width: 575px) {
+  .surface {
+    border-radius: 14px;
+    padding: 1rem;
+  }
+
+  .repo-card h4 {
+    font-size: 1.12rem;
+  }
+
+  .repo-card .btn {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.45rem;
+  }
+
+  .repo-stats-row {
+    gap: 0.45rem;
+  }
+}
