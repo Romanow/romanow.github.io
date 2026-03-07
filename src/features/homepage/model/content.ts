@@ -77,4 +77,5 @@ export const links = {
   linkedin: "https://www.linkedin.com/in/romanowalex/",
   speakerDeck: "https://speakerdeck.com/romanowalex",
   telegram: "https://t.me/romanowalex",
+  itEnduro: "https://it-enduro.com",
 };

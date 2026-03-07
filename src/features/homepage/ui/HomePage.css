@@ -148,6 +148,25 @@ html {
   color: #fff;
 }
 
+.btn-it-enduro {
+  background: #fff;
+  border: 1px solid #b8bec8;
+  color: #3eb772;
+}
+
+.btn-it-enduro:hover {
+  background: #f8f9fb;
+  border-color: #9ea6b2;
+  color: #32975d;
+}
+
+.social-logo {
+  display: block;
+  height: 1.35rem;
+  width: 1.35rem;
+  object-fit: contain;
+}
+
 .btn-github-open {
   background: #fff;
   border: 1px solid #24292f;

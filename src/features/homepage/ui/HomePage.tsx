@@ -157,6 +157,20 @@ function HomePage() {
                 >
                   <FaTelegramPlane /> Telegram
                 </a>
+                <a
+                  className="btn icon-btn btn-it-enduro"
+                  href={links.itEnduro}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img
+                    src="/assets/it-enduro.png"
+                    alt=""
+                    className="social-logo"
+                    aria-hidden="true"
+                  />
+                  IT Enduro
+                </a>
               </div>
             </div>
           </div>
